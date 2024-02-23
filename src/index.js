@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CreateAccount from './CreateAccount.js';
-import LogIn from './LogIn.js';
+import CreateAccount from './pages/CreateAccount.js';
+import LogIn from './pages/LogIn.js';
 import './index.css';
+import AuthenticationPage from './pages/AuthenticationPage.js';
 
 
 function START() {
@@ -11,8 +12,10 @@ function START() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LogIn />} />
-          <Route path="/CreateAccount" element={<CreateAccount />} />
+          <Route path="/" element={<AuthenticationPage />}>
+            <Route index element={<LogIn />} />
+            <Route path="/CreateAccount" element={<CreateAccount />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

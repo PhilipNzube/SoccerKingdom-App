@@ -7,6 +7,15 @@ body {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F4B400;
+  border-radius: 8px;
+}
+
 @media only screen and (min-width:974px) {
 
   #ModalContainer {
